@@ -2,7 +2,7 @@
 /*
 Plugin Name: Countdown Widget
 Plugin URI: 
-Description: Countdown widget for star wars 9.
+Description: Countdown widget, può essere personalizzato con la data preferita e fornisce giorno, ore, minuti e secondi di countdown.
 Author: Iacopo Cutino
 Version: 1.0
 Author URI: www.iacopocutino.it
