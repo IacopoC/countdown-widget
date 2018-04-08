@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: CountdownW
+Plugin Name: Countdown Widget
 Plugin URI: 
 Description: Countdown widget for star wars 9.
 Author: Iacopo Cutino

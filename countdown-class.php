@@ -11,8 +11,8 @@ class Countdown_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'countdown_widget', // Base ID
-			esc_html__( 'Countdown Widget', 'text_domain' ), // Name
-			array( 'description' => esc_html__( 'Countdown Widget', 'text_domain' ), ) // Args
+			esc_html__( 'Countdown Widget', 'countdown_widget' ), // Name
+			array( 'description' => esc_html__( 'Countdown Widget', 'countdown_widget' ), ) // Args
 		);
 	}
 
@@ -62,14 +62,15 @@ class Countdown_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'countdown_widget' );
 		$date = ! empty( $instance['date'] ) ? $instance['date'] : esc_html('01/01/2018');
 		?>
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'text_domain' ); ?></label> 
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'countdown_widget' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'date' ) ); ?>"><?php esc_attr_e( 'Countdown date:', 'countdown_widget' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'date' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'date' ) ); ?>" type="date" value="<?php echo esc_attr( $date ); ?>">
 		</p>
 		<?php 
