@@ -55,7 +55,7 @@ require_once( plugin_dir_path( __FILE__ )  . 'countdown-class.php' );
 * Register Countdown Widget
 */
 
-function register_Countdown_Widget() {
+function register_countdown_widget() {
     	register_widget( 'Countdown_Widget' );
 	}
-	add_action( 'widgets_init', 'register_Countdown_Widget' );
+	add_action( 'widgets_init', 'register_countdown_widget' );
